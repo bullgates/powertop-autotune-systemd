@@ -1,0 +1,5 @@
+post_install() {
+echo "$(tput bold)$(tput setaf 1)Don't forget to do powertop --calibrate before enabling this service!$(tput sgr0)"
+echo "$(tput bold)$(tput setaf 1)The service will start after you restart, so please run the calibrate command now if you haven't done so, or disable it with: systemctl disable powertop-autotune.service$(tput sgr0)"
+systemctl enable powertop-autotune.service
+}
